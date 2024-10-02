@@ -39,7 +39,7 @@ i18next
   });
 
 // fire every 10 second
-cron.schedule("*/10 * * * * *", async () => {
+cron.schedule("0 * * * *", async () => {
   try {
     await WeightServices.createNotificationForWeight();
   } catch (error) {
