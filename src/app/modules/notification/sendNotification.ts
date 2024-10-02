@@ -2,13 +2,11 @@ import admin from "firebase-admin";
 import httpStatus from "http-status";
 import AppError from "../../errors/AppError";
 import NotificationModel from "./notification.model";
+import config from "../../config";
 // Initialize Firebase Admin with a service account
 
 // const clinicaSericeAccountFile = path.join(process.cwd(), './firebase/clinica-serice-account-file.json');
-admin.initializeApp({
-  credential: admin.credential.cert("./clinica-b05e8-firebase-admin-sdk.json"),
-  // credential: admin.credential.cert(clinicaSericeAccountFile),
-});
+admin.initializeApp(config.firebase as any);
 type NotificationPayload = {
   title: string;
   body: string;
