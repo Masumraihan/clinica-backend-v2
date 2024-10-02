@@ -1,0 +1,5 @@
+node_modules
+dist
+.env
+.vercel
+clinica-serice-account-file.json
